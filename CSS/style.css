@@ -1,0 +1,60 @@
+body {
+    background-image: url("https://data.1freewallpapers.com/download/tree-alone-dark-evening-4k.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    size: cover;
+}
+
+fieldset {
+    font-family: serif;
+    border: solid white 3px;
+    border-radius: 10px;
+    justify-content: center;
+    width: 30%;
+}
+
+h1, h2 {
+    color: white;
+}
+
+
+.tarefa {
+    background-color: red;
+    color: white;
+}
+
+.tarefaCacheCSS {
+    background-color: gray;
+    color: black;
+    font-size: 20px;
+}
+
+
+.criarTarefa {
+    width: 50%;
+    border: solid black;
+    border-radius: 10px;
+}
+
+div.criarTarefa {
+    border: none;
+}
+
+.exibirTarefa {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.apagar {
+    display: flex;
+    font-size: 15px;
+}
+
+#header {
+    width: 100%;
+    border-bottom: 3px solid #fff;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    font-family: fantasy;
+}

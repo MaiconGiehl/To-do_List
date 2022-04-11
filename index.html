@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <script src="JS/codigo.js"></script>
+    
+        <h1 id="header">Atividade: Lista de Tarefa || Por: Maicon L. Giehl, TI 2021 B</h1>
+
+        <div class="criarTarefa">
+            <container id="containerAdicionar">
+                <h2>Adicionar nova tarefa</h2>
+                <textarea class="criarTarefa" style="text-transform: capitalize" name="" id="tituloTarefa" cols="40" rows="1" placeholder="Digite o título da tarefa aqui..."></textarea> <br>
+                <textarea class="criarTarefa" name="" id="descricaoTarefa" cols="40" rows="10" autocapitalize="on" placeholder="Digite a descrição da tarefa aqui..."></textarea> <br>
+                <button id="adicionar" onclick="adicionar()">Adicionar</button>
+            </container>
+        </div>
+
+        <div class="tarefasCadastradas"> 
+            <h1>Lista de Tarefas</h1> 
+        </div>
+
+        
+        <h1>Histórico de tarefas</h1>
+        <button id="historico" onclick="revelarCache()">Clique aqui para ver todas as tarefas salvas (tarefas salvas em cachê)</button> <br> <br>
+        
+        <div class="tarefasCache"> </div>
+</body>
+</html>
