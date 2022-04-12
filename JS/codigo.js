@@ -19,19 +19,16 @@ function adicionar () {
         nmrTarefas.push(idTarefa)
 
         const tarefasCadastradas = document.querySelector(".tarefasCadastradas");
-        tarefasCadastradas.insertAdjacentHTML("beforeend", `<div id="${idTarefa}"> 
-            <fieldset style="text-transform: capitalize" class="tarefa"> 
+        tarefasCadastradas.insertAdjacentHTML("beforeend", `<div id="${idTarefa}" class="divTarefas"> 
+            <fieldset style="text-transform: capitalize" class="fieldTarefa"> 
             <h1>${titulo} </h1> <h3 class="exibirTarefa" onclick="exibirTarefa(${idTarefa})"> Exibir Mais </h3> 
             <input class="checkbox" type="checkbox" onclick="alterarCheckbox(${idTarefa})"> Marcar como Concluída </input> <br> <br>
             <button class="apagar" onclick="apagarTarefa(${idTarefa})">Apagar Tarefa</button> 
             </fieldset> <br> </div>`);
-        
-        //Observação: foi escrito a mão mesmo
-        
+                
         document.getElementById("tituloTarefa").value = "";
         document.getElementById("descricaoTarefa").value = "";
         
-
     } else {
         alert("Preencha os dois campos para prosseguir.");
     }
@@ -53,13 +50,18 @@ function exibirTarefa (id) {
     alert(`Tarefa: ${titulo}, Descrição: ${descricao}`);
 }
 
+function limparTarefas() {
+    let divTarefas = document.querySelector(".tarefasCadastradas")
+    divTarefas.innerHTML = ""
+}
+
 function apagarTarefa (id) {
     const tarefa = document.getElementById(`${id}`);
     tarefa.innerHTML = "";
 }
 
 function revelarCache () {
-    const tarefasCache = document.querySelector(".tarefasCache");
+    const tarefasCache = document.querySelector("#tarefasCache");
     tarefasCache.innerHTML = "";
 
     let nmrTarefasEmCache = localStorage.getItem(`nmrTarefas`);
@@ -67,8 +69,8 @@ function revelarCache () {
     for (let idTarefa = 1; idTarefa <= nmrTarefasEmCache; idTarefa++) {
         let titulo = localStorage.getItem(`titulo${idTarefa}`);
         
-        tarefasCache.insertAdjacentHTML("beforeend", `<div id="${idTarefa}"> 
-        <fieldset style="text-transform: capitalize" class="tarefaCacheCSS"> 
+        tarefasCache.insertAdjacentHTML("beforeend", `<div id="${idTarefa}" class="divTarefasCache">
+        <fieldset style="text-transform: capitalize" class="fieldTarefaCacheCSS"> 
         <h2>${titulo} </h2> <p class="exibirTarefa" onclick="exibirTarefa(${idTarefa})"> Exibir Mais </p> 
         </fieldset> <br> </div>`)
     }

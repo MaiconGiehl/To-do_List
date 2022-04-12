@@ -10,25 +10,28 @@
 <body>
     <script src="JS/codigo.js"></script>
     
-        <h1 id="header">Atividade: Lista de Tarefa || Por: Maicon L. Giehl, TI 2021 B</h1>
+        <header>Atividade: Lista de Tarefas || Por: Maicon L. Giehl, TI 2021 B</header>
 
         <div class="criarTarefa">
-            <container id="containerAdicionar">
-                <h2>Adicionar nova tarefa</h2>
+                <h1>Adicionar nova tarefa</h1>
                 <textarea class="criarTarefa" style="text-transform: capitalize" name="" id="tituloTarefa" cols="40" rows="1" placeholder="Digite o título da tarefa aqui..."></textarea> <br>
-                <textarea class="criarTarefa" name="" id="descricaoTarefa" cols="40" rows="10" autocapitalize="on" placeholder="Digite a descrição da tarefa aqui..."></textarea> <br>
-                <button id="adicionar" onclick="adicionar()">Adicionar</button>
-            </container>
+                <textarea class="criarTarefa" name="" id="descricaoTarefa" cols="40" rows="10" autocapitalize="on" placeholder="Digite a descrição da tarefa aqui..."></textarea> <br> <br>
+                <button id="adicionar" onclick="adicionar()">Adicionar</button> <br> <br> <br>
+        </div>
+        
+        <div class="campoTarefas">
+            <div id="tarefasNovas">
+                <h1>Lista de Tarefas</h1> 
+                <div class="tarefasCadastradas"></div>                
+                <button onclick="limparTarefas()" class="noselect"><span class="text">Apagar Tudo</span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
+            </div>
+
+            <div class="tarefasCache">
+                <h1>Histórico de tarefas</h1>
+                <button id="historico" onclick="revelarCache()">Clique aqui para ver todas as tarefas salvas (tarefas salvas em cachê)</button> <br> <br>
+                <span id="tarefasCache"></span>
+            </div>
         </div>
 
-        <div class="tarefasCadastradas"> 
-            <h1>Lista de Tarefas</h1> 
-        </div>
-
-        
-        <h1>Histórico de tarefas</h1>
-        <button id="historico" onclick="revelarCache()">Clique aqui para ver todas as tarefas salvas (tarefas salvas em cachê)</button> <br> <br>
-        
-        <div class="tarefasCache"> </div>
 </body>
 </html>
